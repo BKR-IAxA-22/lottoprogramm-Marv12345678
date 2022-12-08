@@ -23,8 +23,8 @@ namespace Lotto
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int[] RndArray = new int[5];
-            int[] RndArray2 = new int[5];
+            int[] RndArray = new int[6];
+            int[] RndArray2 = new int[6];
 
             for (int i = 0; i < RndArray.Length; i++)
             {   
@@ -34,11 +34,12 @@ namespace Lotto
             {
                 RndArray2[i] = rnd.Next(1, 49);
             }
-            Number1.Text = RndArray[0].ToString();
-            Number2.Text = RndArray[1].ToString();
-            Number3.Text = RndArray[2].ToString();
-            Number4.Text = RndArray[3].ToString();
-            Number5.Text = RndArray[4].ToString();
+            label1.Text = RndArray[0].ToString();
+            label2.Text = RndArray[1].ToString();
+            label3.Text = RndArray[2].ToString();
+            label4.Text = RndArray[3].ToString();
+            label5.Text = RndArray[4].ToString();
+            label6.Text = RndArray[5].ToString();
 
             if (RndArray[0] == RndArray2[0])
             {
@@ -47,47 +48,57 @@ namespace Lotto
 
             else
             {
-                Number1.BackColor = Color.White;
+                label1.BackColor = Color.White;
             }
 
             if (RndArray[1] == RndArray2[1])
             {
-                Number2.BackColor = Color.Green;
+                label2.BackColor = Color.Green;
             }
 
             else
             {
-                Number2.BackColor = Color.White;
+                label2.BackColor = Color.White;
             }
 
             if(RndArray[2] == RndArray2[2])
             {
-                Number3.BackColor = Color.Green;
+                label3.BackColor = Color.Green;
             }
 
             else
             {
-                Number3.BackColor = Color.White;
+                label3.BackColor = Color.White;
             }
 
             if (RndArray[3] == RndArray2[3])
             {
-                Number4.BackColor = Color.Green;
+                label4.BackColor = Color.Green;
             }
 
             else
             {
-                Number4.BackColor = Color.White;
+                label4.BackColor = Color.White;
             }
 
             if (RndArray[4] == RndArray2[4])
             {
-                Number5.BackColor = Color.Green;
+                label5.BackColor = Color.Green;
             }
 
             else
             {
                 Number5.BackColor = Color.White;
+            }
+
+            if (RndArray[5] == RndArray2[5])
+            {
+                label6.BackColor = Color.Green;
+            }
+
+            else
+            {
+                label6.BackColor = Color.White;   
             }
 
 
@@ -117,6 +128,16 @@ namespace Lotto
         private void Number5_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
